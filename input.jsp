@@ -7,7 +7,7 @@
 <title>注册页面</title>
 </head>
 <body>
-	<h2>账号注册</h2>
+	<h2>账号登录</h2>
 	<form action="register.jsp" method="post">
 		账号：<input type="text" name="name"><br/>
 		密码：<input type="password" name="password"><br/>
