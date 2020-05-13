@@ -4,15 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>注册页面</title>
+<title>JDBC登录</title>
 </head>
 <body>
-	<h2>账号登录</h2>
-	<form action="register.jsp" method="post">
-		账号：<input type="text" name="name"><br/>
-		密码：<input type="password" name="password"><br/>
-		<input type="submit" value="提交">&nbsp;&nbsp;
-		<input type="reset" value="重置">
-	</form>
+	<form action="login1.jsp" method="post">
+		<input type="submit" value="管理员"/>&nbsp;&nbsp;&nbsp;&nbsp;
+	</form>	
+	<form action="login.jsp" method="post">
+		<input type="submit" value="学生"/>&nbsp;&nbsp;&nbsp;&nbsp;
+	</form>	
 </body>
 </html>
