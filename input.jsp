@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JDBC登录</title>
+<title>登录</title>
 </head>
 <body>
 	<form action="login1.jsp" method="post">
