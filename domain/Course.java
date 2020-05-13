@@ -56,6 +56,10 @@ public class Course {
 		this.course_semester = course_semester;
 	}
 	
+	public void set_Course_Assessment (String course_assessment) {
+		this.course_assessment = course_assessment;
+	}
+	
 	//获取变量
 	public String get_Course_Id () {
 		return course_id;
