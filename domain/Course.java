@@ -83,7 +83,7 @@ public class Course {
 		return course_assessment;
 	}
 	
-	public String String_Course_Total_Time () {
+	public String get_Course_Total_Time () {
 		return course_total_time;
 	}
 	
