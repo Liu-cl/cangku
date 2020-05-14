@@ -37,7 +37,7 @@ public class Course {
 	public void set_Course_En_Name(String course_en_name) {
 		this.course_en_name = course_en_name;
 	}
-	
+
 	public void set_Course_Credit(String course_credit) {
 		this.course_credit = course_credit;
 	}
@@ -45,6 +45,7 @@ public class Course {
 	//这个设置变量 包括了 总学时、教授学时、实验学时、实习学时和上级学时
 	public void set_Course_time(String course_total_time, String course_teach_time, String course_exp_time,
 			String course_prac_time, String course_comp_time) {
+
 		this.course_total_time = course_total_time;
 		this.course_teach_time = course_teach_time;
 		this.course_exp_time = course_exp_time;
@@ -73,6 +74,7 @@ public class Course {
 		return course_en_name;
 	}
 	
+
 	public String get_Course_Credit () {
 		return course_credit;
 	}
@@ -95,10 +97,6 @@ public class Course {
 	
 	public String get_Course_Prac_Time () {
 		return course_prac_time;
-	}
-	
-	public String get_Course_Comp_time() {
-		return course_comp_time;
 	}
 	
 	public String get_Course_Semester() {

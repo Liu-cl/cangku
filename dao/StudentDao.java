@@ -1,5 +1,7 @@
 package dao;
+
 import domain.Course;
+
 import domain.Student;
 import java.sql.*;
 import util.JDBCUtils;
@@ -42,6 +44,7 @@ public class StudentDao {
         }
         return mycou;
     }
+
 	
 	public Course[] selectCourse(String key) {
 		Course[] cur = new Course[50];
@@ -72,4 +75,5 @@ public class StudentDao {
 		}catch(Exception e) {e.printStackTrace();}
 		return cur;
 	}
+
 }

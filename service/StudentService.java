@@ -9,6 +9,7 @@ public class StudentService {
 		StudentDao userDao = new StudentDao();
 		return userDao.table(stu);
 	}
+    
     public Course[] selectCourse(String key) {
 		StudentDao studentDao = new StudentDao();
 		Course[] cur;
