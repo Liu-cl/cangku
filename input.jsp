@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>选择</title>
-<link href="login.css" rel="stylesheet" type="text/css" />
+<link href="./denglu/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<form action="login1.jsp" method="post">
