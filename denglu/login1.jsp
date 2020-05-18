@@ -5,13 +5,21 @@
 <head>
 <meta charset="UTF-8">
 <title>登录</title>
+<link href="login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<form action="loginValidat1.jsp" method="post">
+<div class="login_box">
+      <div class="login">
+          <div class="login_name">
+               <button>职工</button>
+          </div>
+          <form action="loginValidat1.jsp" method="post">
 		ID：&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id"/><br>
 		密码：&nbsp;<input type="password" name="password"/><br><br>
 		<input type="submit" value="登录"/>&nbsp;&nbsp;&nbsp;&nbsp;
-		<input type="reset" value="重置"/><br>
 	</form>	
+      </div>
+</div>
 </body>
 </html>
+
