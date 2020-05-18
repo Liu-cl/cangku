@@ -31,8 +31,8 @@ public class StudentDao {
                 mycou[ct].set_Course_Ch_Name(re.getString("课程中文名称"));
                 mycou[ct].set_Course_En_Name(re.getString("课程英文名称"));
                 mycou[ct].set_Course_Assessment(re.getString("考核方式"));
-                mycou[ct].set_Course_time(Integer.parseInt(re.getString("总学时")),Integer.parseInt(re.getString("讲授学时")) , Integer.parseInt(re.getString("实验学时")), Integer.parseInt(re.getString("实习学时")), Integer.parseInt(re.getString("上机学时")));
-                mycou[ct].set_Course_Credit(Integer.parseInt(re.getString("学分")));
+                mycou[ct].set_Course_time(re.getString("总学时"),re.getString("讲授学时") , re.getString("实验学时"), re.getString("实习学时"), re.getString("上机学时"));
+                mycou[ct].set_Course_Credit(re.getString("学分"));
                 mycou[ct++].set_Course_Semester(re.getString("执行学期"));
             }
             for( i = 0; i < ct; i++) {
