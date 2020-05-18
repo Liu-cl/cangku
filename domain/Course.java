@@ -50,7 +50,7 @@ public class Course {
 		this.course_teach_time = course_teach_time;
 		this.course_exp_time = course_exp_time;
 		this.course_prac_time = course_prac_time;
-		this.set_Course_comp_time(course_comp_time);
+		this.course_comp_time = course_comp_time;
 	}
 	
 	public void set_Course_Semester(String course_semester) {
@@ -106,7 +106,9 @@ public class Course {
 	public String get_Course_comp_time() {
 		return course_comp_time;
 	}
-
+	public String get_Course_Comp_Time() {
+		return course_comp_time;
+	}
 	public void set_Course_comp_time(String course_comp_time) {
 		this.course_comp_time = course_comp_time;
 	}
