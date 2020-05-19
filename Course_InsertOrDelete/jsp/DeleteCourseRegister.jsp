@@ -17,10 +17,7 @@ Course deleteCourse=new Course();
 deleteCourse.set_Course_Id(request.getParameter("course_id"));
 deleteCourse.set_Course_Ch_Name(request.getParameter("course_ch_name"));
 deleteCourse.set_Course_En_Name(request.getParameter("course_en_name"));
-%>
-<script>
-alert("删除课程成功");
-</script>
+
 <% 
 if(mgService.DeleteCourse(deleteCourse)==true)
 	{
@@ -35,9 +32,6 @@ else
 		request.getRequestDispatcher("DeleteFail.jsp").forward(request, response);
 	}
 %>
-<script>
-alert("删除课程失败");
-</script>
 
 </body>
 </html>
