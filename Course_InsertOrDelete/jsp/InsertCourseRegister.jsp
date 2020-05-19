@@ -24,9 +24,16 @@ insertCourse.set_Course_Semester(request.getParameter("course_semester"));
 %>
 <% 
 if(mgService.InsertCourse(insertCourse)==true)
-	System.out.print("插入成功");
+	{
+		System.out.print("插入成功");
+		request.getRequestDispatcher("InsertSuccess.jsp").forward(request, response);
+	}
+
 else
-	System.out.print("插入失败");
+	{
+		System.out.print("插入失败");
+		request.getRequestDispatcher("InsertFail.jsp").forward(request, response);
+	}
 %>
 	
 </body>
