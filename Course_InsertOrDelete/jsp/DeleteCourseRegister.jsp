@@ -18,12 +18,26 @@ deleteCourse.set_Course_Id(request.getParameter("course_id"));
 deleteCourse.set_Course_Ch_Name(request.getParameter("course_ch_name"));
 deleteCourse.set_Course_En_Name(request.getParameter("course_en_name"));
 %>
+<script>
+alert("删除课程成功");
+</script>
 <% 
 if(mgService.DeleteCourse(deleteCourse)==true)
-	System.out.print("删除成功");
+	{
+		System.out.print("删除成功");
+		request.getRequestDispatcher("DeleteSuccess.jsp").forward(request, response);
+		
+	}
 else
-	System.out.print("删除失败");
-%>
 	
+	{
+		System.out.print("删除失败");
+		request.getRequestDispatcher("DeleteFail.jsp").forward(request, response);
+	}
+%>
+<script>
+alert("删除课程失败");
+</script>
+
 </body>
 </html>
