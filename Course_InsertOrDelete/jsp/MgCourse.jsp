@@ -6,18 +6,30 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+
         .manageCourse .insertCourse,.manageCourse .deleteCourse{
             display: inline-block;
-            width: 600px;
+            width: auto;
             vertical-align: top;
+        }
+        .manageCourse button{
+            width: 300px;
+            height: 2em;
+        }
+        #insertForm ,#deleteForm{
+
+            background-color: #e3e4e2;
+            width: auto;
+            margin-top: -15px;
         }
     </style>
 </head>
 <body>
+
 <div class="manageCourse">
     <div class="insertCourse">
-        <button>插入课程</button>
-        <form action="InsertCourseRegister.jsp">
+        <button class="formButton">插入课程</button>
+        <form action="InsertCourseRegister.jsp" id="insertForm">
             <p>课程代码：&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="course_id" required="required"></p>
 
             <p>课程中文名：<input type="text" name="course_ch_name"></p>
@@ -34,15 +46,78 @@
         </form>
     </div>
     <div class="deleteCourse">
-        <button>删除课程</button>
-        <form action="DeleteCourseRegister.jsp">
+        <button class="formButton">删除课程</button>
+        <form action="DeleteCourseRegister.jsp" id="deleteForm">
             <p>课程代码：&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="course_id"></p>
             <p>课程中文名：<input type="text" name="course_ch_name"></p>
             <p>课程英文名：<input type="text" name="course_en_name"></p>
-               <p><input type="submit" value="删除课程"></p>
+            <p><input type="submit" value="删除课程"></p>
         </form>
     </div>
 </div>
+<script>
+    var flag=0;
+    var flag1=0;
+    var flag2=0;
+    var insertForm = document.getElementById("insertForm");
+    var deleteForm = document.getElementById("deleteForm");
+    var formButton=document.getElementsByClassName("formButton");
+    insertForm.style.display="none";
+    deleteForm.style.display="none";
+    formButton[0].onclick=function(){
+        if(flag1==1&&flag2==0)
+        {
+            insertForm.style.display="none";
+            deleteForm.style.display="none";
+            flag1=0;
+            flag=0;
+        }
+        else
+        if(flag1==0&&flag2==1)
+        {
+            insertForm.style.display="block";
+            deleteForm.style.display="none";
+            flag1=1;
+            flag2=0;
+            flag=1;
+        }
+        else
+        if(flag1==0&&flag2==0)
+        {
+            insertForm.style.display="block";
+            deleteForm.style.display="none";
+            flag1=1;
+            flag=1;
+        }
+    }
+    formButton[1].onclick=function(){
 
+        if(flag1==0&&flag2==1)
+        {
+            insertForm.style.display="none";
+            deleteForm.style.display="none";
+            flag2=0;
+            flag=0;
+        }
+        else
+        if(flag1==1&&flag2==0)
+        {
+            insertForm.style.display="none";
+            deleteForm.style.display="block";
+            flag1=0;
+            flag2=1;
+            flag=1;
+        }
+        else
+        if(flag1==0&&flag2==0)
+        {
+            insertForm.style.display="none";
+            deleteForm.style.display="block";
+            flag2=1;
+            flag=1;
+        }
+    }
+
+</script>
 </body>
 </html>
