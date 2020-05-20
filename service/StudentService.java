@@ -16,4 +16,8 @@ public class StudentService {
 		cur = studentDao.selectCourse(key);
 		return cur;
 	}
+	public Student login(Student stu) {
+    	StudentDao studentDao = new StudentDao();
+    	return studentDao.login(stu);
+    }
 }
