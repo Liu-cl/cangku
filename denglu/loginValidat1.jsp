@@ -9,20 +9,20 @@
 <html>
 <head><meta charset="UTF-8"><title>DAO模式测试</title></head>
 <body>
-<!----- 1.首先创建Person的对象  ------>
-<jsp:useBean id="user" class="domain.Manager"></jsp:useBean>
+<!----- 1.首先创建Manager的对象  ------>
+<jsp:useBean id="man" class="domain.Manager"></jsp:useBean>
 
-<!-----1.为user对象设置值 ------>
-<jsp:setProperty property="*" name="user"/>
+<!-----1.为man对象设置值 ------>
+<jsp:setProperty property="*" name="man"/>
 <%
 	Connection con=JDBCUtils.getConnection();
 	ManagerService ms=new ManagerService();
-	Manager existUser=ms.login(user);
+	Manager existUser=ms.login1(man);
 	if(existUser!=null){
 		out.println(existUser.getName()+"，恭喜你登录成功！<br>");
 %>
 	<h3>登录用户信息</h3>
-	  ID:<%=existUser.getID() %><br>
+	  ID:<%=existUser.getId() %><br>
 	名字：<%=existUser.getName() %><br>
 	密码：<%=existUser.getPassword() %><br>
 <%	
