@@ -75,5 +75,28 @@ public class StudentDao {
 		}catch(Exception e) {e.printStackTrace();}
 		return cur;
 	}
+	public Student login(Student stu) {
+		String studentId = stu.getId();
+		String studentPassword = stu.getPassword();
+		try {
+			conn  = JDBCUtils.getConnection();
+			String sql = "select * from factory.学生 where 学号 = ? and  密码 = ?";
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, studentId);
+			stmt.setString(2, studentPassword);
+			re = stmt.executeQuery();
+			if(!re.next()) {
+				return null;
+			}
+			else {
+				stu.setName(re.getString("姓名"));
+				stu.setSex(re.getString("性别"));
+				stu.setAge(re.getInt("年龄"));
+				stu.setMajor(re.getString("专业"));
+			}
+		}catch(Exception e) {e.printStackTrace();}
+		
+		return stu;
+	}
 
 }
