@@ -42,4 +42,27 @@ public class ManageDao {
 			System.out.println("删除语句为"+stmt);
 			stmt.executeUpdate();
 	}
+	public Manager login1(Manager man) {
+		String managerId = man.getId();
+		String managerPassword = man.getPassword();
+		try {
+			conn  = JDBCUtils.getConnection();
+			String sql = "select * from factory.职工 where 职工号 = ? and  密码 = ?";
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, managerId);
+			stmt.setString(2, managerPassword);
+			re = stmt.executeQuery();
+			if(!re.next()) {
+				return null;
+			}
+			else {
+				man.setname(re.getString("姓名"));
+				//stu.setSex(re.getString("性别"));
+				man.setAge(re.getInt("年龄"));
+				man.setJob(re.getString("职称"));
+			}
+		}catch(Exception e) {e.printStackTrace();}
+		
+		return man;
+	}
 }
