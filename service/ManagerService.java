@@ -2,6 +2,7 @@ package service;
 import domain.Course;
 import java.sql.SQLException;
 import dao.ManageDao;
+import domain.Manager;
 public class ManagerService {
 	private static ManageDao mgDao=new ManageDao();
 	public boolean InsertCourse(Course newcourse) {
@@ -22,5 +23,9 @@ public class ManagerService {
 		}
 		return true;
 	}
+	public Manager login1(Manager man) {
+	    	ManageDao managerDao = new ManageDao();
+	    	return managerDao.login1(man);
+	    }
 }
 
