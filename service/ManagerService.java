@@ -27,5 +27,13 @@ public class ManagerService {
 	    	ManageDao managerDao = new ManageDao();
 	    	return managerDao.login1(man);
 	    }
+	public boolean EditCourse(Course editcourse) {
+		try {
+			mgDao.Edit(editcourse);
+		} catch (SQLException e) {
+			return false;
+		}
+		return true;
+	}
 }
 

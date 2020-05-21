@@ -51,8 +51,6 @@ public class Student {
 	public String getMajor() {
 		return major;
 	}
-	
-	
 }
 
 

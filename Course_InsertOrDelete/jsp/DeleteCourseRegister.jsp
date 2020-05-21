@@ -17,7 +17,7 @@ Course deleteCourse=new Course();
 deleteCourse.set_Course_Id(request.getParameter("course_id"));
 deleteCourse.set_Course_Ch_Name(request.getParameter("course_ch_name"));
 deleteCourse.set_Course_En_Name(request.getParameter("course_en_name"));
-
+%>
 <% 
 if(mgService.DeleteCourse(deleteCourse)==true)
 	{

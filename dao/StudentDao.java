@@ -52,7 +52,7 @@ public class StudentDao {
 		String keyword = "%"+key+"%";	
 		try {
 			conn = JDBCUtils.getConnection();
-			String sql = "select * from javatest.课程 where  课程英文名称 like ? or 课程代码 like ? or 课程中文名称 like ?;";
+			String sql = "select * from 课程 where  课程英文名称 like ? or 课程代码 like ? or 课程中文名称 like ?;";
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, keyword);
 			stmt.setString(2, keyword);
@@ -68,19 +68,21 @@ public class StudentDao {
 				cur[i].set_Course_time(re.getString("总学时"),re.getString("讲授学时") , 
 						re.getString("实验学时"), re.getString("实习学时"), 
 						re.getString("上机学时"));
-				re.getString("执行学期");
+				cur[i].set_Course_Semester(re.getString("执行学期"));
 				i++;
 			}
 			cur[i] = null;
 		}catch(Exception e) {e.printStackTrace();}
 		return cur;
 	}
+	
+	
 	public Student login(Student stu) {
 		String studentId = stu.getId();
 		String studentPassword = stu.getPassword();
 		try {
 			conn  = JDBCUtils.getConnection();
-			String sql = "select * from factory.学生 where 学号 = ? and  密码 = ?";
+			String sql = "select * from 学生 where 学号 = ? and  密码 = ?";
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, studentId);
 			stmt.setString(2, studentPassword);

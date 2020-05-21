@@ -7,6 +7,7 @@ public class ManageDao {
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet re = null;
+	private String sql_edit="UPDATE 课程  SET 讲授学时 = ? ,实验学时 = ? ,实习学时 = ? ,上机学时 = ? ,总学时 = ? WHERE 课程中文名称 = ?";/*编辑预处理*/
 	private String sql_insert="INSERT INTO 课程  VALUES(?,?,?,?,?,?,?,?,?,?,?)";/*插入预处理*/
 	private String sql_deltete="DELETE FROM 课程 WHERE 课程代码=? OR 课程中文名称=? OR 课程英文名称=?";/*删除预处理*/
 	public ManageDao(){
@@ -47,7 +48,7 @@ public class ManageDao {
 		String managerPassword = man.getPassword();
 		try {
 			conn  = JDBCUtils.getConnection();
-			String sql = "select * from factory.职工 where 职工号 = ? and  密码 = ?";
+			String sql = "select * from 管理员 where 职工号 = ? and  密码 = ?";
 			stmt = conn.prepareStatement(sql);
 			stmt.setString(1, managerId);
 			stmt.setString(2, managerPassword);
@@ -61,8 +62,20 @@ public class ManageDao {
 				man.setAge(re.getInt("年龄"));
 				man.setJob(re.getString("职称"));
 			}
-		}catch(Exception e) {e.printStackTrace();}
+		}catch(Exception e) {e.printStackTrace();
+		return null;}
 		
 		return man;
+	}
+	public void Edit(Course course) throws SQLException{/*编辑*/
+		stmt=conn.prepareStatement(sql_edit);
+		stmt.setString(1, course.get_Course_Teach_Time());
+		stmt.setString(2, course.get_Course_Exp_Time());
+		stmt.setString(3, course.get_Course_Prac_Time());
+		stmt.setString(4, course.get_Course_Comp_Time());
+		stmt.setString(5, course.get_Course_Total_Time ());
+		stmt.setString(6, course.get_Course_Ch_Name ());
+		System.out.println("编辑语句为"+stmt);
+		stmt.executeUpdate();
 	}
 }
