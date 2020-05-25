@@ -85,7 +85,11 @@
         	<li><a href="ManageFunction.jsp" class="active">主页</a></li>
        		<li><a href="InsertCourse/InsertCourse.jsp">增加课程</a></li>
         	<li><a href="DeleteCourse/DeleteCourse.jsp">删除课程</a></li>
+<<<<<<< HEAD
        		 <li><a href="EditCourse/edit.jsp">修改课程</a></li>
+=======
+       		 <li><a href="#">修改课程</a></li>
+>>>>>>> 32b98247ba5604528c8fca06a8b4bad4a55ecb67
     	</ul>
 	</div>
 	<div id="back">
@@ -105,7 +109,11 @@
 				<a href="DeleteCourse/DeleteCourse.jsp">删除课程 ></a>
 			</div>
 			<div id="diva">
+<<<<<<< HEAD
 				<a href="EditCourse/edit.jsp">修改课程 ></a>
+=======
+				<a href="../edit.jsp">修改课程 ></a>
+>>>>>>> 32b98247ba5604528c8fca06a8b4bad4a55ecb67
 			</div>
 			
 					

@@ -8,7 +8,11 @@
     <style>
     	body{
     	font-family: 'Open Sans', sans-serif;
+<<<<<<< HEAD
 	    background: url(../../../image/1.jpg)no-repeat center 0px;
+=======
+	    background: url(/课程管理系统/image/1.jpg)no-repeat center 0px;
+>>>>>>> 32b98247ba5604528c8fca06a8b4bad4a55ecb67
 		-webkit-background-size:cover;
 		-moz-background-size:cover; 
 		background-size:cover;
