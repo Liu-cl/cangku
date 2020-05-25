@@ -7,13 +7,13 @@
 <title>功能页面</title>
 <style>
 	body{
-		/* background: url(../image/1.jpg)no-repeat center 0px;
+		/* background: url(../../image/1.jpg)no-repeat center 0px;
 		height:100%;
 		width:100%;
 		background-size:100%；
 		z-index:100; */
 		font-family: 'Open Sans', sans-serif;
-	    background: url(../image/1.jpg)no-repeat center 0px;
+	    background: url(../../image/1.jpg)no-repeat center 0px;
 		-webkit-background-size:cover;
 		-moz-background-size:cover; 
 		background-size:cover;
@@ -42,9 +42,9 @@
 		margin-left:2px;
 	}
 	#diva{
-		display:block;
+		display:inline-block;
 		border:1px solid grey;
-		width:140px;
+		width:120px;
 		height:23px;
 		margin-top:10px;
 		margin-left:5px;
@@ -58,10 +58,36 @@
 	a:hover{
 		text-decoration:underline;
 	}
-	
+	.list a{
+		color:white;
+	}
+	.list ul li a:hover{
+		text-decoration:underline;
+	}
+
+	.list a{
+		 text-decoration:none;
+	}
+	.list ul li{
+		 list-style: none;
+		 display:inline;
+		 margin-left:15px;
+	}
+	.list{
+		position:absolute;
+		left:1300px;
+	}
 </style>
 </head>
 <body>
+	<div class="list">
+    	<ul>
+        	<li><a href="ManageFunction.jsp" class="active">主页</a></li>
+       		<li><a href="InsertCourse/InsertCourse.jsp">增加课程</a></li>
+        	<li><a href="DeleteCourse/DeleteCourse.jsp">删除课程</a></li>
+       		 <li><a href="EditCourse/edit.jsp">修改课程</a></li>
+    	</ul>
+	</div>
 	<div id="back">
 		<div id="image">
 			<p><%out.print(session.getAttribute("name")+",欢迎。"); %></p>
@@ -73,8 +99,17 @@
 				</form>
 			</div>
 			<div id="diva">
-				<a href="course_timetable.jsp">本学期课程查看 ></a>
+				<a href="InsertCourse/InsertCourse.jsp">增加课程 ></a>
 			</div>
+			<div id="diva">
+				<a href="DeleteCourse/DeleteCourse.jsp">删除课程 ></a>
+			</div>
+			<div id="diva">
+				<a href="EditCourse/edit.jsp">修改课程 ></a>
+			</div>
+			
+					
+				
 		</div>
 	</div>
 </body>

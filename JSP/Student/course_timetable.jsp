@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<style>
 	tr{
 		height:40px;
@@ -26,7 +26,7 @@
 	}
 	body {
     font-family: 'Open Sans', sans-serif;
-    background: url(../image/1.jpg)no-repeat center 0px;
+    background: url(../../image/1.jpg)no-repeat center 0px;
 	-webkit-background-size:cover;
 	-moz-background-size:cover; 
 	background-size:cover;

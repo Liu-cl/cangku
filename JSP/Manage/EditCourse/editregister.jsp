@@ -21,13 +21,13 @@ editCourse.set_Course_time(request.getParameter("course_total_time"), request.ge
 if(mgService.EditCourse(editCourse)==true)
 	{
 		System.out.print("修改成功");
-		request.getRequestDispatcher("editsuccess.jsp").forward(request, response);
+		request.getRequestDispatcher("InsertSuccess.jsp").forward(request, response);
 	}
 
 else
 	{
 		System.out.print("修改失败");
-		request.getRequestDispatcher("editfail.jsp").forward(request, response);
+		request.getRequestDispatcher("InsertFail.jsp").forward(request, response);
 	}
 %>
 	

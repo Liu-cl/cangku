@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>登录</title>
-<link href="../css/login1.css" rel="stylesheet" type="text/css" />
+<link href="../../css/login1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="login_box">

@@ -29,7 +29,7 @@
 		session.setAttribute("name",existUser.getName());
 		out.println(existUser.getName()+"，欢迎<br>");
 		out.println("3秒后转跳至功能页面");
-		response.setHeader("refresh", "3;url=StudentFunction.jsp"); 
+		response.setHeader("refresh", "3;url=../Student/StudentFunction.jsp"); 
 		/* request.getRequestDispatcher("StudentFunction.jsp").forward(request, response); */
 %>
 	<%-- <h3>登录用户信息</h3>

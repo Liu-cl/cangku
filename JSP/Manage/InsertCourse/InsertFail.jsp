@@ -8,10 +8,10 @@
 </head>
 <body>
 <script>
-alert("删除课程失败");
+alert("插入课程失败,已有该课程");
 </script>
 <%
-request.getRequestDispatcher("MgCourse.jsp").include(request, response);
+request.getRequestDispatcher("InsertCourse.jsp").include(request, response);
 %>
 </body>
 </html>

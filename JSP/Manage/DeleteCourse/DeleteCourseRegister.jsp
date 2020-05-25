@@ -23,7 +23,6 @@ if(mgService.DeleteCourse(deleteCourse)==true)
 	{
 		System.out.print("删除成功");
 		request.getRequestDispatcher("DeleteSuccess.jsp").forward(request, response);
-		
 	}
 else
 	

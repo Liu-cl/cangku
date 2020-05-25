@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<style>
 	 table{
 		border-spacing: 0;
@@ -26,7 +26,7 @@
 	}
 	body {
 	    font-family: 'Open Sans', sans-serif;
-	     background: url("../image/1.jpg");
+	     background: url("../../image/1.jpg");
 		-webkit-background-size:cover;
 		-moz-background-size:cover; 
 		background-size:cover;
@@ -76,10 +76,10 @@
 			</div>	
 			<div class="list">	
 				<ul>
-					<li><a href="StudentFunction.jsp" class="active">主页</a></li>
-					<li><a href="#">功能1</a></li>  
-					<li><a href="#">功能2</a></li> 
-					<li><a href="#">功能3</a></li>
+					<li><a href="ManageFunction.jsp" class="active">主页</a></li>
+					<li><a href="InsertCourse/InsertCourse.jsp">增加课程</a></li>  
+					<li><a href="DeleteCourse/DeleteCourse.jsp">删除课程</a></li> 
+					<li><a href="#">修改课程</a></li>
 				</ul> 
 			</div>	
 			<div class="clear"></div>
