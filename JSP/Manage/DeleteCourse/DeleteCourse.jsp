@@ -8,11 +8,7 @@
     <style>
     	body{
     	font-family: 'Open Sans', sans-serif;
-<<<<<<< HEAD
-	    background: url(../../../image/1.jpg)no-repeat center 0px;
-=======
 	    background: url(/课程管理系统/image/1.jpg)no-repeat center 0px;
->>>>>>> 32b98247ba5604528c8fca06a8b4bad4a55ecb67
 		-webkit-background-size:cover;
 		-moz-background-size:cover; 
 		background-size:cover;
@@ -70,7 +66,7 @@
         	<li><a href="../ManageFunction.jsp" class="active">主页</a></li>
        		<li><a href="../InsertCourse/InsertCourse.jsp">增加课程</a></li>
         	<li><a href="../DeleteCourse/DeleteCourse.jsp">删除课程</a></li>
-       		 <li><a href="#">修改课程</a></li>
+       		 <li><a href="./EditCourse/edit.jsp">修改课程</a></li>
     	</ul>
 	</div>
 <div class="manageCourse">
